@@ -1,0 +1,9 @@
+*.o
+*.out
+minishell
+result.txt
+*.dSYM
+test/
+test_env/
+*.DS_Store
+42cursus-minishell/
