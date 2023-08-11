@@ -6,11 +6,11 @@
 #    By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 20:55:16 by itan              #+#    #+#              #
-#    Updated: 2023/03/28 02:26:42 by itan             ###   ########.fr        #
+#    Updated: 2023/08/11 20:13:23 by itan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= minishell
+NAME	= rush01
 
 SRC_DIR	= src
 OBJ_DIR	= obj
