@@ -6,7 +6,7 @@
 /*   By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 20:52:04 by itan              #+#    #+#             */
-/*   Updated: 2023/08/12 23:11:55 by itan             ###   ########.fr       */
+/*   Updated: 2023/08/13 00:00:38 by itan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,13 @@ int	get_possible(t_rush01 *rush01, int row, int col, int num)
 		return (0);
 	if (!distance_check(rush01, row, col, num))
 		return (0);
-	if (vc_top(rush01, col) == 0)
+	if (vc_top(rush01, col) == -1)
 		return (0);
-	if (vc_bottom(rush01, col) == 0)
+	if (vc_bottom(rush01, col) == -1)
 		return (0);
-	if (vc_left(rush01, row) == 0)
+	if (vc_left(rush01, row) == -1)
 		return (0);
-	if (vc_right(rush01, row) == 0)
+	if (vc_right(rush01, row) == -1)
 		return (0);
 	return (1);
 }

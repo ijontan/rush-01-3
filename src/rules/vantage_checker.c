@@ -6,7 +6,7 @@
 /*   By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 22:47:26 by itan              #+#    #+#             */
-/*   Updated: 2023/08/12 23:10:47 by itan             ###   ########.fr       */
+/*   Updated: 2023/08/13 00:01:47 by itan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	vc_top(t_rush01 *rush01, int col)
 			count++;
 		}
 	}
-	if (count > rush01->clues[col])
-		return (0);
-	return (1);
+	if (count < rush01->clues[col])
+		return (-1);
+	return (count == rush01->clues[col]);
 }
 
 int	vc_bottom(t_rush01 *rush01, int col)
@@ -55,9 +55,9 @@ int	vc_bottom(t_rush01 *rush01, int col)
 			count++;
 		}
 	}
-	if (count > rush01->clues[rush01->size + col])
-		return (0);
-	return (1);
+	if (count < rush01->clues[rush01->size + col])
+		return (-1);
+	return (count == rush01->clues[rush01->size + col]);
 }
 
 int	vc_left(t_rush01 *rush01, int row)
@@ -79,9 +79,9 @@ int	vc_left(t_rush01 *rush01, int row)
 			count++;
 		}
 	}
-	if (count > rush01->clues[rush01->size * 2 + row])
-		return (0);
-	return (1);
+	if (count < rush01->clues[rush01->size * 2 + row])
+		return (-1);
+	return (count == rush01->clues[rush01->size * 2 + row]);
 }
 
 int	vc_right(t_rush01 *rush01, int row)
@@ -103,9 +103,9 @@ int	vc_right(t_rush01 *rush01, int row)
 			count++;
 		}
 	}
-	if (count > rush01->clues[rush01->size * 3 + row])
-		return (0);
-	return (1);
+	if (count < rush01->clues[rush01->size * 3 + row])
+		return (-1);
+	return (count == rush01->clues[rush01->size * 3 + row]);
 }
 
 int	vantage_checker(t_rush01 *rush01)
